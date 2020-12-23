@@ -1,2 +1,1 @@
-# testephp-ciet
-Teste de Conhecimento em PHP
+# Teste de Conhecimento em PHP
