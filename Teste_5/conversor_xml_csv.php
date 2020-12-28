@@ -14,7 +14,7 @@ function conversorXmlCsv($arquivo_xml, $arquivo_csv) {
 	$arquivo_convertido = fopen($arquivo_csv, 'w');
 	$header = false;
 	
-	foreach($xml as $key => $value){
+	foreach($xml as $value){
 		if(!$header) {
 			fputcsv($arquivo_convertido, array_keys(get_object_vars($value)));
 			$header = true;
