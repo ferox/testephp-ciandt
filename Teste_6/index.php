@@ -1,6 +1,14 @@
 <?php
 
-$linuxDistros = ['Debian', 'Slackware', 'RHEL', 'Suse', 'Ubuntu', 'Fedora', 'OpenSuse'];
+$linuxDistros = [
+  "Debian",
+  "Slackware",
+  "RHEL",
+  "Suse",
+  "Ubuntu",
+  "Fedora",
+  "OpenSuse"
+];
 
 class SelecionaDistroLinux
 {
@@ -33,7 +41,7 @@ class SelecionaDistroLinux
   private function makeOptions($value)
   {
      foreach($value as $v) {
-        echo "<option value=\"$v\">" .ucfirst($v). "</option>\n";
+        echo "<option value=\"" . $v . "\">" .ucfirst($v). "</option>\n";
       }
   }
 
@@ -62,9 +70,7 @@ class SelecionaDistroLinux
       <title>Cadastro de usuário - Vigilantes de Distros</title>
    </head>
    <body>
-      <?php
-         if(!isset($_POST['submit'])) {
-      ?>
+      <?php if (!isset($_POST['submit'])) : ?>
       <form class="border border-light p-5" method="post" action="index.php">
          <p class="h4 mb-4 text-center">Cadastro de usuário - Vigilantes de Distros</p>
          <p class="h5 mb-4 text-center">Formulário</p>
@@ -81,18 +87,16 @@ class SelecionaDistroLinux
          </p>
          <button type="submit" name="submit" class="btn btn-info btn-block my-4">Registrar</button>
       </form>
-      <?php
-         } else {
+      <?php else :
             $name = $_POST['name'];
             $username = $_POST['username'];
             $email = $_POST['email'];
             $selDistro = $_POST['distro'];
-            echo "<p class=\"text-center font-weight-bold\">$name, seu cadastro foi realizado com sucesso!</p>";
+            echo "<p class=\"text-center font-weight-bold\">".$name.", seu cadastro foi realizado com sucesso!</p>";
             echo "<p class=\"text-center font-weight-bold\">Abaixo os dados cadastrados:</p>";
-            echo "<p class=\"text-center\">Nome de usuário: $username</p>";
-            echo "<p class=\"text-center\">E-mail: $email</p>";
-            echo "<p class=\"text-center\">Distribuição GNU/Linux: $selDistro</p>";
-         }
-      ?>
+            echo "<p class=\"text-center\">Nome de usuário: ".$username."</p>";
+            echo "<p class=\"text-center\">E-mail: ".$email."</p>";
+            echo "<p class=\"text-center\">Distribuição GNU/Linux: ".$selDistro."</p>";
+      endif; ?>
    </body>
 </html>
