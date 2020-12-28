@@ -2,35 +2,34 @@
 
 if ($_POST) {
     function registrar () {
-        $arquivo = "registros.php";
+        $arquivo = "registros.json";
         if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) exit("Atenção: E-mail inválido.");
         $tamanhoTelefone = strlen(preg_replace('/[^0-9]/', '', $_POST['telefone']));
         if ($tamanhoTelefone < 10 || $tamanhoTelefone > 11) exit("Atenção: Telefone inválido");
 
         verificaLoginEmail($arquivo);
 
-        $handle = fopen($arquivo, 'a');
+        $json = file_get_contents("registros.json");
+        $registros = json_decode($json, true);
 
         $index = md5($_POST["login"]);
-        $entrada = '$registros[\''.$index.'\'] = [' . "\n";
-        fwrite($handle, $entrada);
-
         $_POST["senha"] = md5($_POST["senha"]);
 
-        foreach ($_POST as $k => $v) {
-            $entrada = "\t" . '\''.$k.'\' => \''.$v.'\',' . "\n";
-            fwrite($handle, $entrada);
-        }
+        $registros[$index] = $_POST;
 
-        $entrada = '];' . "\n\n";
-        fwrite($handle, $entrada);
+        $handle = fopen($arquivo, 'w');
+
+        fwrite($handle, json_encode($registros));
+
         fclose($handle);
 
         exit("Registro salvo com sucesso!");
     }
 
     function verificaLoginEmail ($arquivo) {
-        include_once($arquivo);
+        $json = file_get_contents("registros.json");
+        $registros = json_decode($json, true);
+
         if (!empty($registros)) {
             $index = md5($_POST["login"]);
             foreach ($registros as $k => $v) {
