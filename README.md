@@ -118,7 +118,7 @@ Certifique-se que o php, o composer e o sqlite3 estejam instalados em sua máqui
 
 ### Teste_7
 
-  1. Criando os arquivo com as variáveis de ambiente do projeto de api com o Laravel
+  1. Criando o arquivo com as variáveis de ambiente do projeto de api com o Laravel
   ```sh
   cp .env.example .env
   ```
