@@ -22,19 +22,19 @@
   <summary>Índice</summary>
   <ol>
     <li>
-      <a href="#sobre-teste">Sobre o Teste</a>
+      <a href="#sobre-o-teste">Sobre o Teste</a>
       <ul>
-        <li><a href="#tecnologias">Tecnologias e Frameworks</a></li>
+        <li><a href="#tecnologias-e-frameworks">Tecnologias e Frameworks</a></li>
       </ul>
     </li>
     <li>
       <a href="#iniciando">Iniciando</a>
       <ul>
-        <li><a href="#pre-requisitos">Prerequisito</a></li>
+        <li><a href="#prerequisitos">Prerequisito</a></li>
       </ul>
     </li>
-    <li><a href="#como-usar-repo">Como rodar os testes<license/a></li>
-    <li><a href="#licenca">Licença</a></li>
+    <li><a href="#como-rodar-os-testes">Como rodar os testes<license/a></li>
+    <li><a href="#licença">Licença</a></li>
   </ol>
 </details>
 
