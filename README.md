@@ -183,6 +183,8 @@ Certifique-se que o php, o composer e o sqlite3 estejam estejam instalados em su
     </a>
   </p>
 
+  13. Os dados da API também são persistidos em um arquivo txt que pode ser acesso pela url: http://127.0.0.1:8000/registros/api_usuarios.txt
+
 <!-- LICENÇA -->
 ## Licença
 
