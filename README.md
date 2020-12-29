@@ -33,7 +33,18 @@
         <li><a href="#prerequisitos">Prerequisito</a></li>
       </ul>
     </li>
-    <li><a href="#como-rodar-os-testes">Como rodar os testes<license/a></li>
+    <li>
+      <a href="#como-rodar-os-testes">Como rodar os testes</a>
+      <ul>
+        <li><a href="#teste_1">Teste 1</a></li>
+        <li><a href="#teste_2">Teste 2</a></li>
+        <li><a href="#teste_3">Teste 3</a></li>
+        <li><a href="#teste_4">Teste 4</a></li>
+        <li><a href="#teste_5">Teste 5</a></li>
+        <li><a href="#teste_6">Teste 6</a></li>
+        <li><a href="#teste_7">Teste 7</a></li>
+      </ul>
+    </li>
     <li><a href="#licença">Licença</a></li>
   </ol>
 </details>
