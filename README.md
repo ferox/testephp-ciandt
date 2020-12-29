@@ -30,7 +30,7 @@
     <li>
       <a href="#iniciando">Iniciando</a>
       <ul>
-        <li><a href="#prerequisitos">Prerequisito</a></li>
+        <li><a href="#prerequisitos">Prerequisitos</a></li>
       </ul>
     </li>
     <li>
