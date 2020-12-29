@@ -63,7 +63,7 @@ Clone o projeto para a sua máquina. Feito isso, acesse cada diretório e execut
 
 ### Prerequisitos
 
-Certifique-se que o php, o composer e o sqlite3 estejam estejam instalados em sua máquina.
+Certifique-se que o php, o composer e o sqlite3 estejam instalados em sua máquina.
 * PHP na versão 7.3
   ```sh
   php -v
